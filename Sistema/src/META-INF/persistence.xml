@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="SistemaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>Model.Venta</class>
+    <class>Model.Subasta</class>
+    <class>Model.Usuario</class>
+    <class>Model.ProcesoVenta</class>
+    <class>Model.Contrato</class>
+    <class>Model.DetalleProceso</class>
+    <class>Model.Cliente</class>
+    <class>Model.Productor</class>
+    <class>Model.Roles</class>
+    <class>Model.Oferta</class>
+    <class>Model.MasterProducto</class>
+    <class>Model.Producto</class>
+    <class>Model.Transportista</class>
+    <class>Model.DetalleVenta</class>
+    <class>Model.TipoCliente</class>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@db-portafolio.cgzj6nn5uxmo.us-east-1.rds.amazonaws.com:1521:ORCL"/>
+      <property name="javax.persistence.jdbc.user" value="admin"/>
+      <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      <property name="javax.persistence.jdbc.password" value="Duoc.2019"/>
+    </properties>
+  </persistence-unit>
+</persistence>
