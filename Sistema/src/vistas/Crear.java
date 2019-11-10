@@ -41,7 +41,6 @@ public class Crear extends javax.swing.JInternalFrame {
         passwordcliente = new java.awt.TextField();
         telefonocliente = new java.awt.TextField();
         tipocliente = new java.awt.TextField();
-        eliminado = new java.awt.TextField();
         Nombre = new java.awt.Label();
         label1 = new java.awt.Label();
         label2 = new java.awt.Label();
@@ -51,7 +50,6 @@ public class Crear extends javax.swing.JInternalFrame {
         label6 = new java.awt.Label();
         label8 = new java.awt.Label();
         label9 = new java.awt.Label();
-        label10 = new java.awt.Label();
         label11 = new java.awt.Label();
         button1 = new java.awt.Button();
 
@@ -78,8 +76,6 @@ public class Crear extends javax.swing.JInternalFrame {
         label8.setText("Telefono");
 
         label9.setText("ID TIPO");
-
-        label10.setText("Eliminado");
 
         label11.setFont(new java.awt.Font("Vani", 1, 12)); // NOI18N
         label11.setText("Registro de cliente");
@@ -113,11 +109,10 @@ public class Crear extends javax.swing.JInternalFrame {
                         .addComponent(label5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(label6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(label8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(primernombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(primernombre, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
                     .addComponent(segundonombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(apellidopaterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(apellidomaterno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -125,8 +120,7 @@ public class Crear extends javax.swing.JInternalFrame {
                     .addComponent(emailcliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(passwordcliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(telefonocliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tipocliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(eliminado, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tipocliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(47, 47, 47)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(46, Short.MAX_VALUE))
@@ -176,11 +170,7 @@ public class Crear extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tipocliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(eliminado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         Nombre.getAccessibleContext().setAccessibleName("Nombre");
@@ -193,7 +183,7 @@ public class Crear extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_rutclienteActionPerformed
 
     private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
-        Cliente cli= new Cliente(primernombre.getText(), segundonombre.getText(), apellidopaterno.getText(), apellidomaterno.getText(), rutcliente.getText(), emailcliente.getText(), passwordcliente.getText(), Integer.parseInt(telefonocliente.getText()), Integer.parseInt(tipocliente.getText()), Boolean.parseBoolean(eliminado.getText()));
+        Cliente cli= new Cliente(primernombre.getText(), segundonombre.getText(), apellidopaterno.getText(), apellidomaterno.getText(), rutcliente.getText(), emailcliente.getText(), passwordcliente.getText(), Integer.parseInt(telefonocliente.getText()), Integer.parseInt(tipocliente.getText()));
         ClienteController controller = new ClienteController();
         if(controller.agregar(cli)){
             JOptionPane.showMessageDialog(null,"Agregado Correctamente");
@@ -210,10 +200,8 @@ public class Crear extends javax.swing.JInternalFrame {
     private java.awt.TextField apellidomaterno;
     private java.awt.TextField apellidopaterno;
     private java.awt.Button button1;
-    private java.awt.TextField eliminado;
     private java.awt.TextField emailcliente;
     private java.awt.Label label1;
-    private java.awt.Label label10;
     private java.awt.Label label11;
     private java.awt.Label label2;
     private java.awt.Label label3;

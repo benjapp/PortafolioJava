@@ -38,11 +38,10 @@
                   </Group>
                   <Component id="label8" min="-2" max="-2" attributes="0"/>
                   <Component id="label9" min="-2" max="-2" attributes="0"/>
-                  <Component id="label10" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="primernombre" alignment="0" max="32767" attributes="0"/>
+                  <Component id="primernombre" alignment="0" pref="187" max="32767" attributes="0"/>
                   <Component id="segundonombre" alignment="0" max="32767" attributes="0"/>
                   <Component id="apellidopaterno" alignment="0" max="32767" attributes="0"/>
                   <Component id="apellidomaterno" alignment="0" max="32767" attributes="0"/>
@@ -51,7 +50,6 @@
                   <Component id="passwordcliente" alignment="0" max="32767" attributes="0"/>
                   <Component id="telefonocliente" alignment="0" max="32767" attributes="0"/>
                   <Component id="tipocliente" alignment="0" max="32767" attributes="0"/>
-                  <Component id="eliminado" alignment="0" min="-2" pref="187" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
               <Component id="button1" min="-2" pref="122" max="-2" attributes="0"/>
@@ -115,12 +113,7 @@
                   <Component id="tipocliente" min="-2" max="-2" attributes="0"/>
                   <Component id="label9" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="eliminado" min="-2" max="-2" attributes="0"/>
-                  <Component id="label10" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="87" max="32767" attributes="0"/>
+              <EmptySpace pref="121" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -146,8 +139,6 @@
     <Component class="java.awt.TextField" name="telefonocliente">
     </Component>
     <Component class="java.awt.TextField" name="tipocliente">
-    </Component>
-    <Component class="java.awt.TextField" name="eliminado">
     </Component>
     <Component class="java.awt.Label" name="Nombre">
       <Properties>
@@ -195,11 +186,6 @@
     <Component class="java.awt.Label" name="label9">
       <Properties>
         <Property name="text" type="java.lang.String" value="ID TIPO"/>
-      </Properties>
-    </Component>
-    <Component class="java.awt.Label" name="label10">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Eliminado"/>
       </Properties>
     </Component>
     <Component class="java.awt.Label" name="label11">

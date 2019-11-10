@@ -112,7 +112,7 @@ public class Cliente implements Serializable {
         this.idTipo = tipo;
         this.eliminado = eliminado;
     }
-    public Cliente(String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String rut, String email, String password, int telefono, int tipo, boolean eliminado) {
+    public Cliente(String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String rut, String email, String password, int telefono, int tipo) {
         this.primerNombre = primerNombre;
         this.segundoNombre = segundoNombre;
         this.apellidoPaterno = apellidoPaterno;
