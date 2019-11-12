@@ -84,8 +84,8 @@ public class ClienteController {
     }
     public DefaultTableModel listaPorNombre(String nombre){
     
-        String[] titulos = {"ID", "PRIMER_NOMBRE", "SEGUNDO_NOMBRE", "APELLIDO_PATERNO", "APELLIDO_MATERNO", "RUT","EMAIL","PASSWORD","TELEFONO","ELIMINADO"};
-        String[] registros = new String[10];
+        String[] titulos = {"ID", "PRIMER_NOMBRE", "SEGUNDO_NOMBRE", "APELLIDO_PATERNO", "APELLIDO_MATERNO", "RUT","EMAIL","PASSWORD","TELEFONO","ID_TIPO","ELIMINADO"};
+        String[] registros = new String[11];
         String sql = "SELECT * FROM CLIENTE WHERE PRIMER_NOMBRE LIKE '%"+nombre+"%' AND ELIMINADO =1 ORDER BY ID_CLIENTE";
 
         model = new DefaultTableModel(null, titulos);
@@ -107,7 +107,8 @@ public class ClienteController {
                 registros[6] = rs.getString("EMAIL");
                 registros[7] = rs.getString("PASSWORD");
                 registros[8] = rs.getString("TELEFONO");
-                registros[9] = rs.getString("ELIMINADO");
+                registros[9] = rs.getString("ID_TIPO");
+                registros[10] = rs.getString("ELIMINADO");
                 model.addRow(registros);
             }            
         } catch (SQLException ex) {
@@ -133,5 +134,32 @@ public class ClienteController {
              return false;
        }
       
+    }
+    public boolean editar(Cliente u){
+       try{
+        Conexion cn= new Conexion();
+        conn=cn.conectarMiBD();
+        
+        String query= "UPDATE CLIENTE SET PRIMER_NOMBRE=?,SEGUNDO_NOMBRE=?,APELLIDO_PATERNO=?,APELLIDO_MATERNO=?,RUT=?,EMAIL=?,PASSWORD=?,TELEFONO=?,ID_TIPO=?, ELIMINADO=? where ID_CLIENTE=?";
+        PreparedStatement smtp=conn.prepareStatement(query);
+        smtp.setString(1,u.getPrimerNombre());
+        smtp.setString(2,u.getSegundoNombre());
+        smtp.setString(3,u.getApellidoPaterno());
+        smtp.setString(4,u.getApellidoMaterno());
+        smtp.setString(5,u.getRut());
+        smtp.setString(6,u.getEmail());
+        smtp.setString(7,u.getPassword());
+        smtp.setInt(8,u.getTelefono());
+        smtp.setInt(9, u.getIdTipo());
+        smtp.setBoolean(10,u.getEliminado());
+        smtp.setInt(11, u.getIdCliente());
+        smtp.executeQuery();
+        
+        return true;
+        
+       }catch(SQLException ex){
+             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+             return false;
+       }
     }
 }

@@ -35,6 +35,7 @@ public class Inicio extends javax.swing.JFrame {
         jMenu5 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         ListarPrueba = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenu6 = new javax.swing.JMenu();
         jMenu1 = new javax.swing.JMenu();
 
@@ -68,6 +69,14 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
         jMenu5.add(ListarPrueba);
+
+        jMenuItem2.setText("Editar");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem2);
 
         jMenuBar2.add(jMenu5);
 
@@ -112,6 +121,16 @@ public class Inicio extends javax.swing.JFrame {
         }catch(PropertyVetoException e) { e.printStackTrace(); }
         crea.show();
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        Editar crea = new Editar();
+        jDesktopPane1.add(crea);
+        try
+        {
+            crea.setMaximum(true);
+        }catch(PropertyVetoException e) { e.printStackTrace(); }
+        crea.show();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,5 +178,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     // End of variables declaration//GEN-END:variables
 }

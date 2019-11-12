@@ -33,10 +33,8 @@ public class Conexion {
                 Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
             }
             conn = DriverManager.getConnection(dbUri,dbUser, dbPass);
-            System.out.println("Probado");
         } catch (SQLException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("No funciona");
         }
         return conn;
     }
